@@ -1,4 +1,9 @@
 def inverseCaptcha(number):
+    """number is an int and this function checks if the digit in the
+    number matches the next digit and if yes, adds it to the score.
+    
+    number is circular i.e digit after last one is the first digit"""
+    
     sum = 0
     num = str(number)
     for i in range(len(num)):
@@ -15,6 +20,12 @@ def inverseCaptcha(number):
 
 
 def inverseCaptcha2(number):
+    """number is an int and this function checks if the digit in the
+    number matches the digit halfway down the number 
+    and if yes, adds it to the score.
+    
+    number is circular i.e digit after last one is the first digit"""
+    
     sum = 0
     num = str(number)
     jump = len(num)//2
