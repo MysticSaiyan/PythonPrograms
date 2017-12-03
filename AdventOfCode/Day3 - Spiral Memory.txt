@@ -1,0 +1,7 @@
+Well for part 1:
+	The bottom right diagonal was the square of odd numbers n and 
+	that arm of square was a n*n. So we figured out the closest odd perfect square to given input, found in which arm our number was, found the distance of our number from middle number in that arm and added it to n/2 for the answer.
+
+For part 2:
+	https://oeis.org/A141481
+	lol :P
