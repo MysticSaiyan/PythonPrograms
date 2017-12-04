@@ -1,3 +1,4 @@
+
 def pigLatin(word):
 	vow = ['a','e','i','o','u']
 	if word[0] in vow:
