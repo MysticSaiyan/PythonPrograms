@@ -999,6 +999,7 @@ instructions = """0
 -756
 -79"""
 
+import time
 
 
 
@@ -1023,7 +1024,7 @@ offsetDict2 = offsetDict.copy()
 
 
 
-
+time1 = time.time()
 
 def stepsCalc(offsetDict):
 	"""if you are on number n, jump ahead n numbers and increment n by 1
@@ -1041,6 +1042,7 @@ def stepsCalc(offsetDict):
 
 print(stepsCalc(offsetDict1))
 
+time2 = time.time()
 
 def stepsCalc2(offsetDict):
 	"""if you are on number n, jump ahead n numbers and 
@@ -1065,3 +1067,35 @@ def stepsCalc2(offsetDict):
 
 print(stepsCalc2(offsetDict2))
 
+time3 = time.time()
+
+print("Time taken 1 = " + str(time2-time1) + " seconds")
+print("Time taken 2 = " + str(time3-time2) + " seconds")
+
+
+
+
+
+
+
+# Faster Solution of part 2 (2 secs faster)
+#import time
+#time1 = time.time()
+#
+#
+#with open("p05.txt") as fp:
+#    nums = list(map(int, fp.readlines()))
+#
+## nums = [0, 3, 0, 1, -3]
+#i = 0
+#c = 0
+#while 0 <= i < len(nums):
+#    c += 1
+#    j = i + nums[i]
+#   nums[i] += 1 if nums[i] < 3 else -1
+#    i = j
+#print(c)
+#
+#time2 = time.time()
+#
+#print("Time taken = " + str(time2-time1) + " seconds")
